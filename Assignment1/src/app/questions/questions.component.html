@@ -1,0 +1,30 @@
+<br />
+<br />
+<div>
+  <h2>Questions for Angular Tag 
+    <span id="tag">
+      {{tag}}
+    </span>
+  </h2>
+
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th class="w-20">ID</th>
+              <th class="w-40">Vote Count</th>
+              <th class="w-40">Question Content</th>
+      </tr>
+    </thead>
+        
+   
+    <tr *ngFor="let question of myQuestions">
+      <td>
+        <a href="{{question.questionLink}}">{{question.id}}</a>
+      </td>
+      <td>{{question.voteCount}}</td>
+      <td>{{question.questionTitle}}</td>
+    </tr>
+  </table>
+</div>
+
+<a routerLink="/tags">View All Angular Tags</a>

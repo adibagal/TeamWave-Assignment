@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title> Daily Statistics Dashboard </title>
+   
+    <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css">
+	<link rel="stylesheet" href="vendors/base/vendor.bundle.base.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+    
+    <link rel="shortcut icon" href="images/favicon.png" />
+  </head>
+  <body>
+    <div class="container-scroller">
+				<div class="pro-banner" id="pro-banner">
+						<div class="card pro-banner-bg border-0 rounded-0">
+							<div class="card-body py-3 px-4 d-flex align-items-center justify-content-between flex-wrap"></div>
+								
+								
+						</div>
+					</div>
+				</div>
+
+    <div class="horizontal-menu">
+      <nav class="navbar top-navbar col-lg-12 col-12 p-0">
+        <div class="container-fluid">
+          <div class="navbar-menu-wrapper d-flex align-items-center justify-content-between">
+            
+            <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+				<a class="navbar-brand brand-logo" href="index.html">Hello, Max</a>&#160
+				<i class='far fa-hand-paper' style='font-size:24px'></i>
+				
+				
+			   
+                <a class="navbar-brand brand-logo-mini" href="index.html"><img src="images/logo-mini.svg" alt="logo"/></a>
+            </div>
+            <ul class="navbar-nav navbar-nav-right">
+                
+                <li class="nav-item nav-profile dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
+					<i class="fa fa-bell" style="font-size:24px;color:blue"></i>
+					<i class='far fa-comment-alt' style='font-size:24px;color:blue'></i>
+
+                    <span class="nav-profile-name">Max</span>
+                    <span class="online-status"></span>
+                    <img src="images/faces/face28.png" alt="profile"/>
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+                      <a class="dropdown-item">
+                        <i class="mdi mdi-settings text-primary"></i>
+                        Settings
+                      </a>
+                      <a class="dropdown-item">
+                        <i class="mdi mdi-logout text-primary"></i>
+                        Logout
+                      </a>
+                  </div>
+                </li>
+            </ul>
+            <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="horizontal-menu-toggle">
+              <span class="mdi mdi-menu"></span>
+            </button>
+          </div>
+        </div>
+      </nav>
+      
+    </div>
+
+		<div class="container-fluid page-body-wrapper">
+			<div class="main-panel">
+				<div class="content-wrapper">
+					<div class="row">
+						<div class="col-sm-6 mb-4 mb-xl-0">
+							<div class="d-lg-flex align-items-center">
+								<div>
+									
+									
+								</div>
+								
+							</div>
+						</div>
+						
+					</div>
+				
+									
+										
+						
+					
+					<div class="row">
+						<div class="col-sm-8 flex-column d-flex stretch-card">
+							<div class="row">
+								<div class="col-lg-4 d-flex grid-margin stretch-card  bg-white">
+									<div class="card Heart">
+										<div class="card-body">
+											<h4 class="card-title mb-2" style="color: salmon;">Heart</h4>
+											<i class="fa fa-heart" style="font-size:24px;color:gray;"></i>
+
+											<h2 class="text-dark mb-2 font-weight-bold">119</h2>
+											<small style="color: gray;">bpm</small></td>
+											
+											<small class="text-muted"></small>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-4 d-flex grid-margin stretch-card  bg-white">
+									<div class="card sale-diffrence-border">
+										<div class="card-body">
+											<h4 class="card-title mb-2" style="color: springgreen;">Running</h4>
+											<i class='fas fa-running' style='font-size:24px;color: gray;'></i>
+											<h2 class="text-dark mb-2 font-weight-bold">3043</h2>
+											<small style="color: gray;">m</small></td>
+											<small class="text-muted"></small>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-4 d-flex grid-margin stretch-card">
+									<div class="card sale-visit-statistics-border">
+										<div class="card-body">
+											<h4 class="card-title mb-2" style="color: orangered;">Calories</h4>
+											<i class='fas fa-burn' style='font-size:24px ;color: gray;'></i>
+											<h2 class="text-dark mb-2 font-weight-bold">301</h2>
+											<small style="color: gray;">kcl</small></td>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-6 grid-margin grid-margin-md-0 stretch-card">
+									<div class="card">
+										<div class="card-body">
+											<div class="d-flex align-items-center justify-content-between">
+												<h4 class="card-title">Activity</h4>
+												
+											</div>
+											<div id="support-tracker-legend" class="support-tracker-legend"></div>
+											<canvas id="supportTracker"></canvas>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-6 grid-margin grid-margin-md-0 stretch-card">
+									<div class="card has bg-primary">
+										<div class="card-body text-center">
+											<div class="d-lg-flex align-items-center justify-content-between mb-4">
+												<h3 class="card-title " >You have done today's goals</h3>
+												
+											</div>
+											<div class="product-order-wrap padding-reduced">
+												
+											<div id="productorder-gage" class="gauge productorder-gage"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-12 grid-margin d-flex stretch-card">
+									<div class="card">
+										<div class="card-body">
+											<div class="card"><img alt="Card image cap" class="card-img-top img-fluid" src="images/dashboard/google-location-history.jpg"  alt=""></div>
+											<div class="d-flex align-items-center justify-content-between">
+												<h4 class="card-title mb-2">Trainer</h4>
+												
+												
+											</div>
+											<div>
+												<ul class="nav nav-tabs tab-no-active-fill" role="tablist">
+													
+												</ul>
+												
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4 flex-column d-flex stretch-card">
+							<div class="row flex-grow">
+								<div class="col-sm-12 grid-margin stretch-card">
+									<div class="card">
+										<div class="card-body">
+											<div class="row">
+												<div class="col-lg-8">
+													<h3 class="font-weight-bold text-dark">Today</h3>
+													<i class="fa fa-calendar"aria-hidden="true" style="font-size:24px;color: gray;" ></i>
+													
+
+													
+													
+												</div>
+												<div class="col-lg-4">
+													<div class="position-relative">
+														
+													</div>
+												</div>
+												
+											</div>
+
+											
+											<br>
+											<div class="row">
+												<div class="col-sm-12 ">
+													
+													<div class=" text-white px-4 py-4" style="background-color: #EAF5F2;">
+														<h4 class="card-title mb-2 ">Pilates</h4>
+														<div  style="text-align: right;color: black">9:30</div>
+													</div>		
+																
+																								
+												
+												</div>
+											</div>
+
+											<br>
+											<div class="row">
+												<div class="col-sm-12 ">
+													
+													<div class=" text-white px-4 py-4" style="background-color: #EAF5F2;">
+														<h4 class="card-title mb-2 ">Box</h4>
+														<div  style="text-align: right;color: black">10:00</div>
+													</div>		
+												
+													
+												</div>
+											</div>
+											<br>
+											<div class="row">
+												<div class="col-sm-12 ">
+													
+													<div class=" text-white px-4 py 4 " style="background-color: #EAF5F2;">
+														<h4 class="card-title mb-2 ">Aerobics</h4>
+														<div  style="text-align: right;color: black;">8:30</div>
+													</div>		
+																
+													
+														
+													
+												</div>
+											</div>
+											<div class="row pt-3 mt-md-1">
+												<div class="col">
+													<div class="d-flex purchase-detail-legend align-items-center">
+													
+														
+													</div>
+												</div>
+												<div class="col">
+													
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-12 grid-margin stretch-card">
+									<div class="card">
+										<div class="card-body">
+											<div class="row">
+												<div class="col-lg-12">
+													
+														<h4 class="card-title mb-2">Top Trainer</h4>
+														
+														<div class="row">
+															<div class="col-sm-12 ">
+															 
+																<div class=" text-white px-4 py 4 " style="background-color:#D3D3D3;"><br>
+																	<h4 class="card-title mb-2 ">Brandon jones</h4>
+																	<i class="fa fa-twitter" style="font-size:36px"></i>
+																	<i class="fa fa-facebook-f"  style="font-size:24px;color: white;"></i>
+																	
+																</div>		
+																
+																
+																	
+																
+															</div>
+														</div>
+
+														<br>
+														<div class="row">
+															<div class="col-sm-12 ">
+																
+																<div class="text-white px-4 py 4 "style="background-color:#D3D3D3;"><br>
+																	<h4 class="card-title mb-2">Lee Murphy</h4>
+																	<i class="fa fa-facebook-f"  style="font-size:24px;margin-right: auto;"></i>
+
+																
+																</div>		
+																			
+																
+																	
+																
+															</div>
+														</div>
+
+														<br>
+
+														<div class="row">
+															<div class="col-sm-12 ">
+																
+																<div class=" text-white px-4 py 4 "style="background-color:#D3D3D3;"><br>
+																	<h4 class="card-title mb-2 ">Marvin wilson</h4>
+																	<i class="fa fa-twitter" 
+																	 style="font-size:36px"></i>
+																
+																</div>		
+																			
+																
+																	
+																
+															</div>
+														</div>
+													</div>
+											
+													
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+			
+		
+        </footer>
+				
+			</div>
+		
+		</div>
+	
+    </div>
+	
+    <script src="vendors/base/vendor.bundle.base.js"></script>
+  
+    <script src="js/template.js"></script>
+  
+    <script src="vendors/chart.js/Chart.min.js"></script>
+    <script src="vendors/progressbar.js/progressbar.min.js"></script>
+		<script src="vendors/chartjs-plugin-datalabels/chartjs-plugin-datalabels.js"></script>
+		<script src="vendors/justgage/raphael-2.1.4.min.js"></script>
+		<script src="vendors/justgage/justgage.js"></script>
+  
+    <script src="js/dashboard.js"></script>
+	
+	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  </body>
+</html>
